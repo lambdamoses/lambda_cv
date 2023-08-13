@@ -1,0 +1,86 @@
+---
+name: "Lambda Moses (aka Dongyi/Lambda Lu)"
+position: "Postdoctoral Fellow"
+address: "Division of Biology and Biological Engineering,\\tabularnewline California Institute of Technology"
+pronouns: she/her
+phone: +1 424 666 5899
+email: "dlu2@caltech.edu"
+github: lambdamoses
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+aboutme: "ORCID: 0000-0002-7092-9427"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Info,
+  "PhD in biology", "2017-2023", "California Institute of Technology", "Pasadena, CA",
+  c("Built Voyager geospatial exploratory spatial data analysis (ESDA) framework for spatial -omics",
+    "Analyses of history and sociology of the field of spatial transcriptomics in Museum of Spatial Transcriptomics book and review paper",
+    "Contributed to the kallisto bustools single cell RNA-seq pseudoalignment framework",
+    "PI: Lior Pachter"),
+  "Bachelor of Science", "2013-2017", "University of California, Los Angeles", "Los Angeles, CA",
+  c("Molecular, cell, and developmental biology (highest departmental honors)",
+    "Computational and systems biology (valedictorian)",
+    "Summa cum laude, Phi Beta Kappa",
+    "Genome wide association study of liver lipid and iron phenotypes in hybrid mouse diversity panel",
+    "PI: Aldons J. Lusis")
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where, Info)
+```
+
+# Research experiences
+```{r}
+tribble(
+    ~ What, ~ Year, ~ Institution, ~ Where, ~ Info,
+    "Postdoctoral Fellow", "2023-present", "California Institute of Technology", "Pasadena, CA",
+    c("Comprehensive analyses of mouse adipose control and Itih5 knockout spatial transcriptomics data",
+      "Extension of Voyager to case control, multiple biological replica, and 3D data",
+      "PI: Lior Pachter")
+) %>% 
+  detailed_entries(What, Year, Institution, Where, Info)
+```
+
+# Software
+```{r}
+library(dplyr)
+
+bibliography_entries("packages.bib") %>%
+  arrange(desc(issued))
+```
+
+# Presentations
+
+```{r}
+tribble(
+    ~Year, ~What, ~Desc,
+    2023, "Voyager: Exploratory spatial data analysis from geospatial to spatial -omics",
+    "Workshop, Bioconductor Conference, Dana-Farber Cancer Institute, Harvard Medical School",
+    2023, "Voyager: Exploratory spatial data analysis from geospatial to spatial -omics",
+    "Invited talk, Cedars-Sinai Medical Center, Los Angeles",
+    2023, "From geospatial to spatial -omics with SpatialFeatureExperiment and Voyager",
+    "Invited talk, Advanced Biomedical Computation series, Brigham & Women's Hospital, Harvard Medical School",
+    2022, "SpatialFeatureExperiment: An S4 Class Bringing Geospatial Tools To Spatial Omics",
+    "Package demo, Bioconductor Conference, Seattle Children's Research Institute",
+    2020, "Museum of Spatial Transcriptomics",
+    "Short talk, Bioconductor Conference, virtual"
+) |> 
+    brief_entries(
+        What, Year, Desc
+    )
+```
+
+# Publications
+
+```{r}
+bibliography_entries("works.bib") %>%
+  arrange(desc(issued))
+```

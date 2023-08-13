@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  
+  <title>lambda_cv.knit</title>
+
+  
+  
+    <link href="data:text/css,%0Ahtml%2C%20body%2C%20div%2C%20span%2C%20applet%2C%20object%2C%20iframe%2C%0Ah1%2C%20h2%2C%20h3%2C%20h4%2C%20h5%2C%20h6%2C%20p%2C%20blockquote%2C%20pre%2C%0Aa%2C%20abbr%2C%20acronym%2C%20address%2C%20big%2C%20cite%2C%20code%2C%0Adel%2C%20dfn%2C%20em%2C%20img%2C%20ins%2C%20kbd%2C%20q%2C%20s%2C%20samp%2C%0Asmall%2C%20strike%2C%20strong%2C%20sub%2C%20sup%2C%20tt%2C%20var%2C%0Ab%2C%20u%2C%20i%2C%20center%2C%0Adl%2C%20dt%2C%20dd%2C%20ol%2C%20ul%2C%20li%2C%0Afieldset%2C%20form%2C%20label%2C%20legend%2C%0Atable%2C%20caption%2C%20tbody%2C%20tfoot%2C%20thead%2C%20tr%2C%20th%2C%20td%2C%0Aarticle%2C%20aside%2C%20canvas%2C%20details%2C%20embed%2C%0Afigure%2C%20figcaption%2C%20footer%2C%20header%2C%20hgroup%2C%0Amenu%2C%20nav%2C%20output%2C%20ruby%2C%20section%2C%20summary%2C%0Atime%2C%20mark%2C%20audio%2C%20video%20%7B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0Aborder%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Afont%3A%20inherit%3B%0Avertical%2Dalign%3A%20baseline%3B%0A%7D%0A%0Aarticle%2C%20aside%2C%20details%2C%20figcaption%2C%20figure%2C%0Afooter%2C%20header%2C%20hgroup%2C%20menu%2C%20nav%2C%20section%20%7B%0Adisplay%3A%20block%3B%0A%7D%0Abody%20%7B%0Aline%2Dheight%3A%201%3B%0Abackground%2Dcolor%3A%20white%3B%0A%7D%0Aol%2C%20ul%20%7B%0Alist%2Dstyle%3A%20none%3B%0A%7D%0Ablockquote%2C%20q%20%7B%0Aquotes%3A%20none%3B%0A%7D%0Ablockquote%3Abefore%2C%20blockquote%3Aafter%2C%0Aq%3Abefore%2C%20q%3Aafter%20%7B%0Acontent%3A%20%27%27%3B%0Acontent%3A%20none%3B%0A%7D%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0A%0Abody%20%7B%0Afont%3A%20normal%20normal%20400%3B%0Afont%2Dsize%3A%2080%25%3B%0Aline%2Dheight%3A%201%2E5em%3B%0A%0Afont%2Dfamily%3A%20Verdana%2Csans%2Dserif%3B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dleft%3A%201em%3B%0A%7D%0Ap%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%2033%25%3B%0Amargin%2Dbottom%3A%200%2E7em%3B%0Amargin%2Dright%3A%200%3B%0Awidth%3A%2065%25%3B%0A%7D%0A%2Ecsl%2Dleft%2Dmargin%20%7B%0Aposition%3A%20relative%3B%0Afloat%3A%20left%3B%0Aleft%3A%2033%25%3B%0Amargin%2Dleft%3A%20%2D3em%3B%0Amargin%2Dbottom%3A%200%2E7em%3B%0Amargin%2Dright%3A%200%2E5em%3B%0A%7D%0A%2Ecsl%2Dright%2Dinline%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%2033%25%3B%0Amargin%2Dbottom%3A%200%2E7em%3B%0Amargin%2Dright%3A%200%3B%0Awidth%3A%2065%25%3B%0A%7D%0Acode%20%7B%0Afont%3A%20normal%20normal%3B%0Afont%2Dsize%3A%2060%25%3B%0A%0Afont%2Dfamily%3A%20Menlo%2Cmonospace%2Csans%2Dserif%3B%0Acolor%3A%20%23aaa%3B%0A%7D%0Ap%20code%20%7B%0Aposition%3A%20absolute%3B%0Aleft%3A%20%2D14%25%3B%0A%7D%0Aul%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%2033%25%3B%0Awidth%3A%2065%25%3B%0Amargin%2Dbottom%3A%201%2E5em%3B%0Amargin%2Dtop%3A%20%2D0%2E5em%3B%0A%7D%0A%0A%0Ali%20%7B%0A%0Apadding%2Dleft%3A%201%2E25em%3B%0Atext%2Dindent%3A%20%2D1%2E25em%3B%0A%0A%7D%0Ali%20ul%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%200%3B%0Awidth%3A%20100%25%3B%0Amargin%2Dtop%3A%200%2E25em%3B%0A%7D%0Ah1%2Ch2%2Ch3%2Ch4%20%7B%0Afont%2Dweight%3A%20400%3B%0Afont%2Dfamily%3A%20Cousine%2CVerdana%2Csans%2Dserif%3B%0Awidth%3A%2065%25%3B%0A%7D%0Ah1%20%7B%0Atext%2Dalign%3A%20left%3B%0Afont%2Dsize%3A%203em%3B%0Aline%2Dheight%3A%201em%3B%0Aposition%3A%20relative%3B%0Aleft%3A%2033%25%3B%0A%7D%0Ah1%2Bp%20%7B%0A%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dsize%3A%20110%25%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%201%2E1em%3B%0Acolor%3A%20%23a00%3B%0Amargin%2Dtop%3A%203em%3B%0Aposition%3A%20relative%3B%0Atop%3A%201%2E4em%3B%0Atext%2Dalign%3A%20right%3B%0Awidth%3A%2020%25%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201em%3B%0Aline%2Dheight%3A%202em%3B%0Aposition%3A%20relative%3B%0Atop%3A%201%2E7em%3B%0Atext%2Dalign%3A%20right%3B%0Awidth%3A%2020%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20inherit%3B%0A%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%2339f%0A%7D%0A%23webaddress%20%7B%0Amargin%2Dtop%3A%201em%3B%0Aposition%3A%20relative%3B%0Aleft%3A%2033%25%3B%0Acolor%3A%20%23aaa%3B%0Afont%2Dfamily%3A%20Menlo%2Cmonospace%2Csans%2Dserif%3B%0Afont%2Dsize%3A%2080%25%3B%0A%7D%0A%23webaddress%20a%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aem%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%23address%20%7B%0Adisplay%3A%20none%3B%0A%7D%0A%0A" type="text/css" rel="stylesheet" media="screen">
+  <link href="data:text/css,%0Ahtml%2C%20body%2C%20div%2C%20span%2C%20applet%2C%20object%2C%20iframe%2C%0Ah1%2C%20h2%2C%20h3%2C%20h4%2C%20h5%2C%20h6%2C%20p%2C%20blockquote%2C%20pre%2C%0Aa%2C%20abbr%2C%20acronym%2C%20address%2C%20big%2C%20cite%2C%20code%2C%0Adel%2C%20dfn%2C%20em%2C%20img%2C%20ins%2C%20kbd%2C%20q%2C%20s%2C%20samp%2C%0Asmall%2C%20strike%2C%20strong%2C%20sub%2C%20sup%2C%20tt%2C%20var%2C%0Ab%2C%20u%2C%20i%2C%20center%2C%0Adl%2C%20dt%2C%20dd%2C%20ol%2C%20ul%2C%20li%2C%0Afieldset%2C%20form%2C%20label%2C%20legend%2C%0Atable%2C%20caption%2C%20tbody%2C%20tfoot%2C%20thead%2C%20tr%2C%20th%2C%20td%2C%0Aarticle%2C%20aside%2C%20canvas%2C%20details%2C%20embed%2C%0Afigure%2C%20figcaption%2C%20footer%2C%20header%2C%20hgroup%2C%0Amenu%2C%20nav%2C%20output%2C%20ruby%2C%20section%2C%20summary%2C%0Atime%2C%20mark%2C%20audio%2C%20video%20%7B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0Aborder%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Afont%3A%20inherit%3B%0Avertical%2Dalign%3A%20baseline%3B%0A%7D%0A%0Aarticle%2C%20aside%2C%20details%2C%20figcaption%2C%20figure%2C%0Afooter%2C%20header%2C%20hgroup%2C%20menu%2C%20nav%2C%20section%20%7B%0Adisplay%3A%20block%3B%0A%7D%0Abody%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Aol%2C%20ul%20%7B%0Alist%2Dstyle%3A%20none%3B%0A%7D%0Ablockquote%2C%20q%20%7B%0Aquotes%3A%20none%3B%0A%7D%0Ablockquote%3Abefore%2C%20blockquote%3Aafter%2C%0Aq%3Abefore%2C%20q%3Aafter%20%7B%0Acontent%3A%20%27%27%3B%0Acontent%3A%20none%3B%0A%7D%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0A%0Abody%20%7B%0Afont%3A%20normal%20normal%20400%3B%0Afont%2Dsize%3A%2010pt%3B%0Aline%2Dheight%3A%201%2E35em%3B%0A%0Afont%2Dfamily%3A%20Verdana%2Csans%2Dserif%3B%0A%0A%7D%0Ap%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%2028%25%3B%0Amargin%2Dbottom%3A%200%2E2em%3B%0Amargin%2Dright%3A%200%3B%0Awidth%3A%2070%25%3B%0A%7D%0A%2Ecsl%2Dleft%2Dmargin%20%7B%0Aposition%3A%20relative%3B%0Afloat%3A%20left%3B%0Aleft%3A%2028%25%3B%0Amargin%2Dleft%3A%20%2D3em%3B%0Amargin%2Dbottom%3A%200%2E2em%3B%0Amargin%2Dright%3A%200%2E5em%3B%0A%7D%0A%2Ecsl%2Dright%2Dinline%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%2028%25%3B%0Amargin%2Dbottom%3A%200%2E2em%3B%0Amargin%2Dright%3A%200%3B%0Awidth%3A%2070%25%3B%0A%7D%0Acode%20%7B%0Afont%3A%20normal%20normal%3B%0Afont%2Dsize%3A%2060%25%3B%0A%0Afont%2Dfamily%3A%20Menlo%2Cmonospace%2Csans%2Dserif%3B%0Acolor%3A%20%23ccc%3B%0A%7D%0Ap%20code%20%7B%0Aposition%3A%20absolute%3B%0Aleft%3A%20%2D11%25%3B%0A%7D%0Aul%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%2028%25%3B%0Awidth%3A%2065%25%3B%0Amargin%2Dbottom%3A%201em%3B%0A%0A%7D%0A%0A%0Ali%20%7B%0A%0Apadding%2Dleft%3A%201%2E25em%3B%0Atext%2Dindent%3A%20%2D1%2E25em%3B%0A%0A%7D%0Ali%20ul%20%7B%0Aposition%3A%20relative%3B%0Aleft%3A%200%3B%0Awidth%3A%20100%25%3B%0Amargin%2Dtop%3A%200%2E25em%3B%0A%7D%0Ah1%2Ch2%2Ch3%2Ch4%20%7B%0Afont%2Dweight%3A%20400%3B%0Afont%2Dfamily%3A%20Cousine%2CVerdana%2Csans%2Dserif%3B%0Awidth%3A%2065%25%3B%0A%7D%0Ah1%20%7B%0Atext%2Dalign%3A%20left%3B%0Afont%2Dsize%3A%203em%3B%0Aline%2Dheight%3A%201em%3B%0Aposition%3A%20relative%3B%0Aleft%3A%2028%25%3B%0A%7D%0Ah1%2Bp%20%7B%0A%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dsize%3A%20110%25%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%201%2E1em%3B%0Acolor%3A%20%23a00%3B%0Amargin%2Dtop%3A%202em%3B%0Aposition%3A%20relative%3B%0Atop%3A%201%2E2em%3B%0Atext%2Dalign%3A%20right%3B%0Awidth%3A%2018%25%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201em%3B%0Aline%2Dheight%3A%202em%3B%0Acolor%3A%20%23ccc%3B%0Aposition%3A%20relative%3B%0Atop%3A%201%2E6em%3B%0Atext%2Dalign%3A%20right%3B%0Awidth%3A%2018%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3Anone%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%2339f%0A%7D%0A%23webaddress%20%7B%0Amargin%2Dtop%3A%201em%3B%0Aposition%3A%20relative%3B%0Aleft%3A%2028%25%3B%0Acolor%3A%20%23ccc%3B%0Afont%2Dfamily%3A%20Menlo%2Cmonospace%2Csans%2Dserif%3B%0Afont%2Dsize%3A%2080%25%3B%0A%7D%0A%23webaddress%20a%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aem%20%7B%0Afont%2Dstyle%3A%20normal%3B%0Acolor%3A%20%232d4e5e%0A%7D%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%23ghbutton%20%7B%0Adisplay%3A%20none%3B%0Avisibility%3A%20hidden%3B%0A%7D%0A" type="text/css" rel="stylesheet" media="print">
+</head>
+<body>
+    <div id="main">
+    <div id="content">
+      <h1>Lambda Moses</h1>
+      <p>Postdoctoral Fellow</p>
+      <p>Division of Biology and Biological Engineering, California
+Institute of Technology</p>
+
+      <div id="webaddress">
+      |
+      <i class="fa fa-comment"></i> she/her |
+      <i class="fa fa-phone"></i> +1 424 666 5899 |
+      
+      <i class="fa fa-envelope"></i> <a href="mailto:dlu2@caltech.edu" class="email">dlu2@caltech.edu</a> |
+      
+      <i class="fa fa-github"></i> <a href="https://github.com/lambdamoses">lambdamoses</a> |
+      
+      
+      
+      
+      </div>
+
+      <div id="education" class="section level1">
+      <h1>Education</h1>
+      <p>
+      <code>2017-2023</code> <strong>Pasadena, CA</strong> PhD in
+      biology (California Institute of Technology)
+      <ul>
+      <li>
+      Bring geospatial data structures and methods to spatial -omics in
+      R packages SpatialFeatureExperiment and Voyager
+      </li>
+      <li>
+      Analyses of history and sociology of the field of spatial
+      transcriptomics in Museum of Spatial Transcriptomics book and
+      review paper
+      </li>
+      <li>
+      Contributed to the kallisto bustools single cell pseudoalignment
+      project
+      </li>
+      </ul>
+      </p>
+      <p>
+      <code>2013-2017</code> <strong>Los Angeles, CA</strong> Bachelor
+      of Science (University of California, Los Angeles)
+      <ul>
+      <li>
+      Molecular, cell, and developmental biology (highest departmental
+      honors)
+      </li>
+      <li>
+      Computational and systems biology (valedictorian)
+      </li>
+      <li>
+      Summa cum laude, Phi Beta Kappa
+      </li>
+      <li>
+      Genome wide association study of liver lipid and iron phenotypes
+      in hybrid mouse diversity panel
+      </li>
+      </ul>
+      </p>
+      </div>
+      <div id="software" class="section level1">
+      <h1>Software</h1>
+      <p>
+      <code>2023</code> Voyager (Bring geospatial exploratory spatial
+      data analysis to spatial -omics)
+      </p>
+      <p>
+      <code>2023</code> SpatialFeatureExperiment (Bring geospatial
+      Simple Features to SingleCellExperiment)
+      </p>
+      <p>
+      <code>2023</code> SFEData (Example datasets for Voayger and
+      SpatialFeatureExperiment)
+      </p>
+      <p>
+      <code>2023</code> concordexR (Cluster purity metric based on the
+      k-nearest-neighbor graph)
+      </p>
+      <p>
+      <code>2021</code> spatialDE (R wrapper for SpatialDE)
+      </p>
+      <p>
+      <code>2019</code> BUSpaRse (kallisto | bustools R utilities)
+      </p>
+      <p>
+      <code>2019</code> TENxBUSData (Single cell dataset from 10x in BUS
+      format)
+      </p>
+      </div>
+      <div id="presentations" class="section level1">
+      <h1>Presentations</h1>
+      <p>
+      <code>2023</code> Voyager: Exploratory spatial data analysis from
+      geospatial to spatial -omics (Workshop, Bioconductor Conference,
+      Dana-Farber Cancer Institute, Harvard Medical School)
+      </p>
+      <p>
+      <code>2023</code> Voyager: Exploratory spatial data analysis from
+      geospatial to spatial -omics (Invited talk, Cedars-Sinai Medical
+      Center, Los Angeles)
+      </p>
+      <p>
+      <code>2023</code> From geospatial to spatial -omics with
+      SpatialFeatureExperiment and Voyager (Invited talk, Advanced
+      Biomedical Computation series, Brigham &amp; Women’s Hospital,
+      Harvard Medical School)
+      </p>
+      <p>
+      <code>2022</code> SpatialFeatureExperiment: An S4 Class Bringing
+      Geospatial Tools To Spatial Omics (Package demo, Bioconductor
+      Conference, Seattle Children’s Research Institute)
+      </p>
+      <p>
+      <code>2020</code> Museum of Spatial Transcriptomics (Short talk,
+      Bioconductor Conference, virtual)
+      </p>
+      </div>
+      <div id="publications" class="section level1">
+      <h1>Publications</h1>
+      <div id="bibliography">
+      <div id="ref-Moses_2023" class="csl-entry">
+      <div class="csl-left-margin">1. </div><div class="csl-right-inline">Moses, L., Einarsson, P. H., Jackson, K.,
+      Luebbert, L., Booeshaghi, A. S., Antonsson, S., Melsted, P., &amp;
+      Pachter, L. (2023). <em>Voyager: Exploratory single-cell genomics
+      data analysis with geospatial statistics</em>. <a href="https://doi.org/10.1101/2023.07.20.549945">https://doi.org/10.1101/2023.07.20.549945</a></div>
+      </div>
+      <div id="ref-Fuqua_2023" class="csl-entry">
+      <div class="csl-left-margin">2. </div><div class="csl-right-inline">Fuqua, B. K., Moses, L., McLachlan, S.,
+      Pan, C., Davis, R. C., Hui, S. T., Che, N., Zhou, Z., Ng, C.,
+      Charugundla, S., Blencowe, M., Saleem, Z., Miikeda, A., Ozdemir,
+      B., Hui, C., Li, T., Stolin, C. L., Kozuch, M., Zhou, J., … Lusis,
+      A. J. (2023). <em>The genetic architecture of dietary iron
+      overload and associated pathology in mice</em>. <a href="https://doi.org/10.1101/2023.06.05.543764">https://doi.org/10.1101/2023.06.05.543764</a></div>
+      </div>
+      <div id="ref-Jackson_2023" class="csl-entry">
+      <div class="csl-left-margin">3. </div><div class="csl-right-inline">Jackson, K., Booeshaghi, A. S.,
+      Gálvez-Merchán, Ángel, Moses, L., Chari, T., &amp; Pachter, L.
+      (2023). <em>Quantitative assessment of single-cell RNA-seq
+      clustering with CONCORDEX</em>. <a href="https://doi.org/10.1101/2023.06.28.546949">https://doi.org/10.1101/2023.06.28.546949</a></div>
+      </div>
+      <div id="ref-Moses_2022" class="csl-entry">
+      <div class="csl-left-margin">4. </div><div class="csl-right-inline">Moses, L., &amp; Pachter, L. (2022).
+      Museum of spatial transcriptomics. <em>Nature Methods</em>. <a href="https://doi.org/10.1038/s41592-022-01409-2">https://doi.org/10.1038/s41592-022-01409-2</a></div>
+      </div>
+      <div id="ref-Melsted_2019" class="csl-entry">
+      <div class="csl-left-margin">5. </div><div class="csl-right-inline">Melsted, P., Booeshaghi, A. S., Gao, F.,
+      Veiga Beltrame, E. da, Lu, L., Hjorleifsson, K. E., Gehring, J.,
+      &amp; Pachter, L. (2019). <em>Modular and efficient pre-processing
+      of single-cell RNA-seq</em>. <a href="https://doi.org/10.1101/673285">https://doi.org/10.1101/673285</a></div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
