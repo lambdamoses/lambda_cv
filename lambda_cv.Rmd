@@ -16,40 +16,44 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Education
-
-```{r}
-library(tibble)
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Info,
-  "PhD in biology", "2017-2023", "California Institute of Technology", "Pasadena, CA",
-  c("Built Voyager geospatial exploratory spatial data analysis (ESDA) framework for spatial -omics",
-    "Analyses of history and sociology of the field of spatial transcriptomics in Museum of Spatial Transcriptomics book and review paper",
-    "Contributed to the kallisto bustools single cell RNA-seq pseudoalignment framework",
-    "PI: Lior Pachter"),
-  "Bachelor of Science", "2013-2017", "University of California, Los Angeles", "Los Angeles, CA",
-  c("Molecular, cell, and developmental biology (highest departmental honors)",
-    "Computational and systems biology (valedictorian)",
-    "Summa cum laude, Phi Beta Kappa",
-    "Genome wide association study of liver lipid and iron phenotypes in hybrid mouse diversity panel",
-    "PI: Aldons J. Lusis")
-) %>% 
-  detailed_entries(Degree, Year, Institution, Where, Info)
-```
-
 # Research experiences
 ```{r}
+library(tibble)
+library(dplyr)
 tribble(
     ~ What, ~ Year, ~ Institution, ~ Where, ~ Info,
     "Postdoctoral Fellow", "2023-present", "California Institute of Technology", "Pasadena, CA",
     c("Comprehensive analyses of mouse adipose control and Itih5 knockout spatial transcriptomics data",
       "Extension of Voyager to case control, multiple biological replica, and 3D data",
-      "PI: Lior Pachter")
+      "PI: Lior Pachter"),
+    "Graduate researcher", "2017-2023", "California Institute of Technology", "Pasadena, CA",
+    c("Built Voyager geospatial exploratory spatial data analysis (ESDA) framework for spatial -omics",
+    "Analyses of history and sociology of the field of spatial transcriptomics in Museum of Spatial Transcriptomics book and review paper",
+    "Contributed to the kallisto bustools single cell RNA-seq pseudoalignment framework",
+    "PI: Lior Pachter"),
+    "Undergraduate researcher", "2015-2017", "University of California, Los Angeles", "Los Angeles, CA",
+    c("Genome wide association study of liver lipid phenotypes in iron overload in hybrid mouse diversity panel",
+    "PI: Aldons J. Lusis")
 ) %>% 
   detailed_entries(What, Year, Institution, Where, Info)
 ```
 
+# Education
+
+```{r}
+df <- tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "PhD in biology", "2017-2023", "California Institute of Technology", "Pasadena, CA",
+  "Bachelor of Science", "2013-2017", "University of California, Los Angeles", "Los Angeles, CA",
+)
+df$Info <- I(list(NULL, c("Molecular, cell, and developmental biology (highest departmental honors)",
+    "Computational and systems biology (valedictorian)",
+    "Summa cum laude, Phi Beta Kappa")))
+detailed_entries(df, Degree, Year, Institution, Where, Info)
+```
+
 # Software
+Bioconductor R packages:
 ```{r}
 library(dplyr)
 
