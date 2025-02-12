@@ -1,10 +1,10 @@
 ---
 name: "Lambda Moses (aka Dongyi/Lambda Lu)"
 position: "Postdoctoral Scholar"
-address: "Division of Biology and Biological Engineering,\\tabularnewline California Institute of Technology"
+address: "Department of Statistics,\\tabularnewline Columbia University"
 pronouns: she/her
 phone: +1 424 666 5899
-email: "dlu2@caltech.edu"
+email: "dl3764@columbia.edu"
 github: lambdamoses
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::hyndman
@@ -22,12 +22,17 @@ library(scholar)
 library(tidyverse)
 tribble(
     ~ What, ~ Year, ~ Institution, ~ Where, ~ Info,
-    "Postdoctoral scholar", "2023-present", "California Institute of Technology", "Pasadena, CA",
-    c("Comprehensive analyses of mouse adipose control and Itih5 knockout spatial transcriptomics data",
-      "Extension of Voyager to case control, multiple biological replica, and 3D data",
+    "Postdoctoral scholar", "2024-present", "Columbia University", "New York, NY",
+    c("Implementing on-disk functionalities of SpatialFeatureExperiment for interoperable analyses of large spatial -omics data",
+      "Finding effects of technology and spatial aggregation scale on common downstream spatial -omics analyses",
+      "Using Moran eigenvector spatial filtering to identify global and local negative spatial autocorrelation in spatial -omics data",
+      "PI: Bianca Dumitrascu"),
+    "Postdoctoral scholar", "2023-2024", "California Institute of Technology", "Pasadena, CA",
+    c("Implemented functionalities to work with large images and transcript spot geometries in SpatialFeatureExperiment",
       "PI: Lior Pachter"),
     "Graduate researcher", "2017-2023", "California Institute of Technology", "Pasadena, CA",
     c("Built Voyager geospatial exploratory spatial data analysis (ESDA) framework for spatial -omics",
+      "Integrated geospatial data structure into SingleCellExperiment as a new data structure SpatialFeatureExperiment",
     "Analyses of history and sociology of the field of spatial transcriptomics in Museum of Spatial Transcriptomics book and review paper",
     "Contributed to the kallisto bustools single cell RNA-seq pseudoalignment framework",
     "PI: Lior Pachter"),
@@ -66,6 +71,8 @@ bibliography_entries("packages.bib") %>%
 ```{r}
 tribble(
     ~Year, ~What, ~Desc,
+    2024, "Exploratory spatial data analysis from single molecules to multiple samples",
+    "Workshop, Bioconductor Conference, Van Andel Institute, Grand Rapids, MI",
     2023, "Voyager: Exploratory spatial data analysis from geospatial to spatial -omics",
     "Workshop, Bioconductor Conference, Dana-Farber Cancer Institute, Harvard Medical School",
     2023, "Voyager: Exploratory spatial data analysis from geospatial to spatial -omics",
@@ -90,7 +97,8 @@ scholar::get_publications("JjotaJ0AAAAJ") |>
     what = title,
     when = year,
     with = author,
-    where = journal
+    where = journal,
+    why = cites
   ) |> 
     mutate(why = unlist(why) |> as.integer(),
            why = case_when(why > 0 ~ paste0("Google Scholar citations: ", why),
